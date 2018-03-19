@@ -109,10 +109,6 @@ class CreateCard extends Component {
             />
           </div>
         </div>
-          
-
-        
-
         <div className="button-list">
           <button
             id="cancelButton"
