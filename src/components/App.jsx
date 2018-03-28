@@ -23,7 +23,7 @@ class App extends Component {
     const accessToken = Cookies.get('cookie');
     const googleApi = 'https://www.googleapis.com/oauth2/v3/tokeninfo';
 
-    if (redirectedUrl.includes('?code=')) {
+    if (accessToken) {
       googleOauth(googleApi, accessToken)
         .then(email => {
           isTokenValid(email)

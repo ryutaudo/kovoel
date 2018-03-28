@@ -13,7 +13,7 @@ router.get('/google/callback',
   (request, response) => {
     let accessToken = response.req.user.accessToken;
     response.cookie('cookie', accessToken, { maxAge: 900000, httpOnly: false });
-    response.redirect(`${url}?code=${response.req.query.code}`);
+    response.redirect(`${url}`);
   }
 );
 
